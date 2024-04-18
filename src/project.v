@@ -53,7 +53,6 @@ module tt_um_example (
   );
   
   assign uio_oe[7:0] = 7'b0000000; //sets the IO to inputs
-  assign uio_in[7:3] = 5'b00000;
   assign uio_out[7:0] = 8'd0;
   
  
