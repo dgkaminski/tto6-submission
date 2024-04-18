@@ -52,7 +52,7 @@ module tt_um_example (
   .Z(uo_out[0])
   );
   
-  assign uio_oe[7:0] = 7'b0000000; //sets the IO to inputs
+  assign uio_oe[7:0] = 8'd0; //sets the IO to inputs
   assign uio_out[7:0] = 8'd0;
   
  
