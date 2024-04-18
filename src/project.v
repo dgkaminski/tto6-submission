@@ -53,8 +53,7 @@ module tt_um_dgkaminski (
   );
   
   assign uio_oe[7:0] = 8'd0; //sets the IO to inputs
-  assign uiO_out = 0;
-  
+  assign uio_out = 0;
  
 
 endmodule
