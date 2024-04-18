@@ -18,7 +18,7 @@ module alu(A, B, FS, Y, C, V, N, Z);
   wire C_ADD, C_SHIFT;
   wire V_ADD;
 
-  control controller(
+  control controller0(
 	 .FS(FS),
 	 .BSEL(BSEL), 
 	 .CISEL(CISEL), 
@@ -29,7 +29,7 @@ module alu(A, B, FS, Y, C, V, N, Z);
 	 .CSEL(CSEL) 
   );
   
-  adder add(
+  adder add0(
 	 .A(A),
 	 .B(BSEL ? ~B : B),
 	 .CI(CISEL ? 1'b1 : 1'b0),
@@ -38,7 +38,7 @@ module alu(A, B, FS, Y, C, V, N, Z);
 	 .V(V_ADD)
   );
   
-  shifter shift(
+  shifter shift0(
 	 .A(A),
 	 .LA(SHIFT_LA),
 	 .LR(SHIFT_LR),
@@ -46,7 +46,7 @@ module alu(A, B, FS, Y, C, V, N, Z);
 	 .C(C_SHIFT)
   );
   
-  logical logic(
+  logical logic0(
 	 .A(A),
 	 .B(BSEL ? ~B : B),
 	 .OA(LOGICAL_OA),
