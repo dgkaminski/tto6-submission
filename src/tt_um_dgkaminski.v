@@ -6,7 +6,7 @@
 
 `define default_netname none
 
-module tt_um_example (
+module tt_um_dgkaminski (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -53,7 +53,6 @@ module tt_um_example (
   );
   
   assign uio_oe[7:0] = 8'd0; //sets the IO to inputs
-  assign uio_out[7:0] = 8'd0;
   
  
 
