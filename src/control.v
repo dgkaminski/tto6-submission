@@ -120,7 +120,7 @@ module control(FS, BSEL, CISEL, OSEL, SHIFT_LA, SHIFT_LR, LOGICAL_OA, CSEL); // 
       default: begin
         BSEL = BSEL_B;
 		  CISEL = DONT_CARE;
-		  OSEL = DONT_CARE;
+		  OSEL = 2'd0;
 		  SHIFT_LA = DONT_CARE;
 		  SHIFT_LR = DONT_CARE;
 		  LOGICAL_OA = DONT_CARE; 

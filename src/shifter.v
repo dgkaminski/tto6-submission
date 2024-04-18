@@ -20,23 +20,23 @@ module shifter(A, LA, LR, Y, C);
   always @(*) begin
    //shift left
 	if (LR == 1'b0) begin
-		C <= A[3];
-		Y <= {A[2:0], 1'b0};
+		C = A[3];
+		Y = {A[2:0], 1'b0};
 	end
 	//shift right logical
 	else if (LR == 1'b1 & LA == 1'b0) begin
-		C <= A[0];
-		Y <= {1'b0, A[3:1]};
+		C = A[0];
+		Y = {1'b0, A[3:1]};
 	end
 	//shift right arithmetic
 	else if (LR == 1'b1 & LA == 1'b1) begin
-		C <= A[0];
-		Y <= {A[3], A[3:1]};
+		C = A[0];
+		Y = {A[3], A[3:1]};
 	end
 	//if no either case occurs
 	else begin
-		Y <= A;
-		C <= 1'b0;
+		Y = A;
+		C = 1'b0;
 	end
   end
   
