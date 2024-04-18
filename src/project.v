@@ -32,7 +32,7 @@ module tt_um_example (
 	ui_in[7:4] -> A[3:0]
 	ui_in[3:0] -> B[3:0]
 	uio_oe[2:0] -> 1'b0, enables uio_in[7:4] to be input, will set all to 1 here for ease
-	uio_in[2:0] -> FS[2:0
+	uio_in[2:0] -> FS[2:0]
 	uo_out[7:4] -> Y[3:0]
 	uo_out[3] -> C
 	uo_out[2] -> V
