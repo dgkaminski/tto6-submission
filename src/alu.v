@@ -54,7 +54,7 @@ module alu(A, B, FS, Y, C, V, N, Z);
   );
   
    assign V = (((FS == 3'b000) | (FS == 3'b001)) ? V_ADD : 1'b0); //check for an overflow if using the adder, otherwise set to zero
-	assign Z = (Y == 8'd0); //always check for a zero output
+	assign Z = (Y == 4'd0); //always check for a zero output
 	assign N = Y[7]; //always check for a negative output
 	assign C = (CSEL == 2'd0 ? C_ADD : (CSEL == 2'd2 ? C_SHIFT : 1'b0)); //select the desired carry out
 	assign Y = (OSEL == 2'd0 ? Y_ADD : (OSEL == 2'd1 ? Y_SHIFT : (OSEL == 2'd2 ? Y_LOGIC : 4'b0000))); //select your desired Y
